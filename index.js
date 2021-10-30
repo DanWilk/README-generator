@@ -93,6 +93,21 @@ const promptUser = () => {
 
 promptUser()
     .then(data => {
-        generatePage(data);
+        return generatePage(data);
+    })
+    .then( page => {
+        return new Promise((resolve, reject)=> {
+            fs.writeFile('./dist/README.md', page, err => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+    
+                resolve({
+                    ok: true,
+                    message: 'File created!'
+                });
+            });
+        });
     });
 

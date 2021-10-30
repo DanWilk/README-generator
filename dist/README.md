@@ -1,33 +1,30 @@
-module.exports = templateData => {
-    console.log(templateData);
-    const {name, projectTitle, description, email, installation, usage, contribute, test, questions, license} = templateData;
-   return`
+
    # Project Title {#title}
-   ${projectTitle}
+   README
    
    ## Project Description {#description}
-   ${description}
+   f
 
    ## Installation {#install}
    In order to install this project:
-   ${installation}
+   f
 
    ## Usage {#usage}
-   ${usage}
+   f
 
    ## Contributing {#contribute}
-   ${contribute}
+   f
 
    ## Tests {#tests}
-   ${test}
+   f
 
    ## Questions {#quest}
    If you have any questions reach out to me through:
-   - email: <${email}>
-   - Github: [${name}](https://github.com/${name})
+   - email: <dcwilkinson@wilktech.com>
+   - Github: [DanWilk](https://github.com/DanWilk)
    
    ## Liscense {#lisc}
-   ${license}
+   GNU
 
    ### Table of Contents
    - [Project Title](#title)
@@ -38,6 +35,4 @@ module.exports = templateData => {
    - [Tests](#tests)
    - [Questions](#quest)
    - [License](#lisc)
-   `
-
-}
+   
