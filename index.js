@@ -20,10 +20,10 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'projectTitle',
-            message: 'what is the title of this project (required)',
+            message: 'What is the title of this project (required)',
             validate: titleInput => {
                 if (!titleInput) {
-                    console.log('Please the project title.');
+                    console.log('Please enter the project title.');
                     return false;
                 } else {
                     return true;
@@ -64,12 +64,12 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'usage',
-            message: 'what will this project be used for?'
+            message: 'Please enter some usage information?'
         },
         {
             type: 'input',
             name: 'contribute',
-            message: 'please add some contribution guidelines'
+            message: 'Please add some contribution guidelines'
         },
         {
             type: 'input',
@@ -77,14 +77,9 @@ const promptUser = () => {
             message: 'How should this project be tested?'
         },
         {
-            type: 'input',
-            name: 'questions',
-            message: 'How would you like to recieve questions concerning this project'
-        },
-        {
             type: 'list',
             name: 'license',
-            message: 'what license is this project using?',
+            message: 'What license is this project using?',
             choices: ['GNU', 'MIT', 'ISC', 'No License']
         }
 

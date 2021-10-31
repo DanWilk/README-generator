@@ -1,8 +1,8 @@
 module.exports = templateData => {
     console.log(templateData);
     const {name, projectTitle, description, email, installation, usage, contribute, test, questions, license} = templateData;
-   return`
-   # Project Title {#title}
+   return`                                                      
+   # Project Title {#title}                                                             ![license](https://img.shields.io/badge/License-${license}-blue)
    ${projectTitle}
    
    ## Project Description {#description}
@@ -21,13 +21,13 @@ module.exports = templateData => {
    ## Tests {#tests}
    ${test}
 
-   ## Questions {#quest}
+   ## Questions {#questions}
    If you have any questions reach out to me through:
    - email: <${email}>
    - Github: [${name}](https://github.com/${name})
    
-   ## Liscense {#lisc}
-   ${license}
+   ## Liscense {#license}
+   This project is covered under ${license} license
 
    ### Table of Contents
    - [Project Title](#title)
@@ -36,8 +36,8 @@ module.exports = templateData => {
    - [Usage](#usage)
    - [Contributing](#contribute)
    - [Tests](#tests)
-   - [Questions](#quest)
-   - [License](#lisc)
+   - [Questions](#questions)
+   - [License](#license)
    `
 
 }
